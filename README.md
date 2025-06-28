@@ -23,9 +23,9 @@ Após as devidas configurações:
 ``docker-compose up -d``
 
 ## Acesso dos container:
-Acesso a aplicação: [localhost:8000](http://localhost:8000){:target="_blank"}
+Acesso a aplicação: [localhost:8000](http://localhost:8000)
 
-Acesso ao PHPMyadmin: [localhost:8080](http://localhost:8080){:target="_blank"}
+Acesso ao PHPMyadmin: [localhost:8080](http://localhost:8080)
 
 Acesso ao Redis: ``redis-cli -h *<host> -p 6379``
 
