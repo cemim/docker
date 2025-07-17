@@ -1,5 +1,18 @@
 # PROJETO DOCKER
 
+## 🐳 Ambiente Docker para Desenvolvimento PHP Multiversão
+Este projeto fornece um ambiente Docker completo e flexível para desenvolvimento com múltiplas versões do PHP e bancos de dados. Ideal para quem trabalha com diferentes aplicações ou precisa testar compatibilidade entre versões.
+
+## 🎯 Funcionalidades
+- Escolha entre várias versões do PHP (ex: 7.4, 8.0, 8.1, 8.2…)
+- Suporte a diferentes bancos de dados:
+  - MySQL / MariaDB
+  - PostgreSQL
+  - Redis (opcional)
+- Configuração simples via .env e docker-compose.yml
+- Compatível com WordPress, Laravel, Symfony e outros frameworks PHP
+- Extensível para novas tecnologias e serviços (Nginx, MailHog, etc.)
+
 ## Pré-requisitos
 - WSL (Windows)
 - Docker
