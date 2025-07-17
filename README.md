@@ -13,14 +13,14 @@ Este projeto fornece um ambiente Docker completo e flexível para desenvolviment
 - Compatível com WordPress, Laravel, Symfony e outros frameworks PHP
 - Extensível para novas tecnologias e serviços (Nginx, MailHog, etc.)
 
-## Pré-requisitos
+## 🛠 Pré-requisitos
 - WSL (Windows)
 - Docker
 - Docker-compose
 - Git
 - Redis-cli
 
-## Instalação
+## 🚀 Instalação
 Clonar esse projeto pra dentro da raíz do projeto:
 
 ``git clone https://github.com/cemim/docker.git``
@@ -35,7 +35,7 @@ Clonar esse projeto pra dentro da raíz do projeto:
 Após as devidas configurações:
 ``docker-compose up -d``
 
-## Acesso dos container:
+## 🚀 Acesso dos container:
 Acesso a aplicação: [localhost:8000](http://localhost:8000)
 
 Acesso ao PHPMyadmin: [localhost:8080](http://localhost:8080)
