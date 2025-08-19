@@ -53,14 +53,21 @@ RUN apt-get -y update --fix-missing && \
     docker-php-ext-install pdo_mysql pdo_sqlite mysqli curl zip -j$(nproc) intl mbstring gettext soap exif
 
 
-# Install Freetype 
-RUN apt-get -y update && \
-    apt-get --no-install-recommends install -y libfreetype6-dev \
-libjpeg62-turbo-dev \
-libpng-dev && \
+# Install GD com suporte a WebP e AVIF
+RUN apt-get update && \
+    apt-get --no-install-recommends install -y \
+    libfreetype6-dev \
+    libjpeg62-turbo-dev \
+    libpng-dev \
+    libwebp-dev \
+    libavif-dev && \
     rm -rf /var/lib/apt/lists/* && \
-    docker-php-ext-configure gd --enable-gd --with-freetype --with-jpeg && \
-    docker-php-ext-install gd
+    docker-php-ext-configure gd \
+        --with-freetype \
+        --with-jpeg \
+        --with-webp \
+        --with-avif && \
+    docker-php-ext-install -j$(nproc) gd
 
 # Enable apache modules
 RUN a2enmod rewrite headers
