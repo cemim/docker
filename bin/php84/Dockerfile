@@ -69,6 +69,13 @@ RUN apt-get update && \
         --with-avif && \
     docker-php-ext-install -j$(nproc) gd
 
+# Install imagick
+RUN apt-get update && \
+    apt-get -y --no-install-recommends install libmagickwand-dev && \
+    rm -rf /var/lib/apt/lists/* && \
+    pecl install imagick && \
+    docker-php-ext-enable imagick    
+
 # Enable apache modules
 RUN a2enmod rewrite headers
 
